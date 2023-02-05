@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(162, 174, 61);
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);  
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    margin-left: 30px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .menus a{
+    font-size: 15px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(199, 216, 225);
+    color: black;
+    
+    text-decoration: none;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: rgb(162, 174, 61);
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav .menus a {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+  .section {
+    background-color: #5688b4;
+    
+    padding: 100px 0;
+    position: relative;
+  }
+  .gray-bg {
+      background-color: #f5f5f5;
+  }
+  img {
+      max-width: 100%;
+  }
+  img {
+      vertical-align: middle;
+      border-style: none;
+      border-radius: 150px;
+      
+  }
+  /* About Me 
+  ---------------------*/
+  .about-text h3 {
+    color: rgb(162, 174, 61);
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  @media (max-width: 767px) {
+    .about-text h3 {
+      font-size: 35px;
+    }
+  }
+  .about-text h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 767px) {
+    .about-text h6 {
+      font-size: 18px;
+    }
+  }
+  .about-text p {
+    font-size: 18px;
+    max-width: 450px;
+  }
+  .about-text p mark {
+    font-weight: 600;
+    color: #20247b;
+  }
+  
+  .about-list {
+    padding-top: 10px;
+  }
+  .about-list .media {
+    padding: 5px 0;
+  }
+  .about-list label {
+    color: #20247b;
+    font-weight: 600;
+    width: 88px;
+    margin: 0;
+    position: relative;
+  }
+  .about-list label:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 11px;
+    width: 1px;
+    height: 12px;
+    background: #20247b;
+    -moz-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+    margin: auto;
+    opacity: 0.5;
+  }
+  .about-list p {
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  @media (max-width: 991px) {
+    .about-avatar {
+      margin-top: 30px;
+    }
+  }
+  
+  .about-section .counter {
+    padding: 22px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  }
+  .about-section .counter .count-data {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .about-section .counter .count {
+    font-weight: 700;
+    color: #20247b;
+    margin: 0 0 5px;
+  }
+  .about-section .counter p {
+    font-weight: 600;
+    margin: 0;
+  }
+  mark {
+      background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+      background-size: 100% 3px;
+      background-repeat: no-repeat;
+      background-position: 0 bottom;
+      background-color: transparent;
+      padding: 0;
+      color: currentColor;
+  }
+  .theme-color {
+      color: #fc5356;
+  }
+  .dark-color {
+      color: #20247b;
+  }
+
+                          
+#services {}
+#services .services-top {
+    padding: 70px 0 50px;
+}
+#services .services-list {
+    padding-top: 50px;
+}
+.services-list .service-block {
+    margin-bottom: 25px;
+}
+.services-list .service-block .ico {
+    font-size: 38px;
+    float: left;
+}
+.services-list .service-block .text-block {
+    margin-left: 58px;
+}
+.services-list .service-block .text-block .name {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+.services-list .service-block .text-block .info {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.services-list .service-block .text-block .text {
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 300;
+}
+.highlight {
+    color: rgb(162, 174, 61);
+    font-weight:bold;
+}                    
+
+
+.gradient-brand-color {
+  background-image: -webkit-linear-gradient(0deg, rgb(178, 189, 82) 0%, rgb(162, 174, 61) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(178, 189, 82) 0%, rgb(162, 174, 61) 100%);
+  color: #fff;
+}
+.contact-info__wrapper {
+  overflow: hidden;
+  border-radius: .625rem .625rem 0 0
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 1024px) {
+  .contact-info__wrapper {
+      border-radius: 0 .625rem .625rem 0;
+      padding: 5rem !important
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contact-info__list span.position-absolute {
+  left: 0
+}
+.z-index-101 {
+  z-index: 101;
+}
+.list-style--none {
+  list-style: none;
+}
+.contact__wrapper {
+  background-color: #fff;
+  border-radius: 0 0 .625rem .625rem
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media (min-width: 1024px) {
+  .contact__wrapper {
+      border-radius: .625rem 0 .625rem .625rem
   }
 }
+@media (min-width: 1024px) {
+  .contact-form__wrapper {
+      padding: 5rem !important
+  }
+}
+.shadow-lg, .shadow-lg--on-hover:hover {
+  box-shadow: 0 1rem 3rem rgba(132,138,163,0.4) !important;
+}
+
+
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 0px 0;
+}
+
+
+#footer {
+    background: rgb(162, 174, 61) !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
